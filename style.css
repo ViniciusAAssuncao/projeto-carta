@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
 body {
-  background-color: #FAFCFF;
+  background-color: #fafcff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -9,7 +9,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #f5f5dc;
+  background-color: #f8f8d9;
 }
 
 .title-header {
@@ -17,28 +17,22 @@ header {
   padding-right: 2px;
 }
 
-@keyframes mudar-fundo {
-  0% {
-    background-color: #f5f5dc;
-  }
-  25% {
-    background-color: #ffe4e1;
-  }
-  50% {
-    background-color: #ffffe0;
-  }
-  75% {
-    background-color: #e0ffff;
-  }
-  100% {
-    background-color: #f5f5dc;
-  }
+#theme-toggle {
+  margin-left: auto;
+  margin-right: 20px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f8f8d9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
+
 #carta {
   margin: auto;
   max-width: 700px;
   padding: 20px;
-  background-color: white;
+  background-color: #f8f8d9;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   animation: mudar-fundo 10s ease-in-out infinite;
@@ -53,3 +47,28 @@ header {
   align-items: center;
 }
 
+body.dark-mode {
+  background-color: #333;
+  color: #fafcff;
+}
+
+body.dark-mode header {
+  background-color: #222;
+}
+
+body.dark-mode #carta {
+  background-color: #222;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Estilos comuns */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+}
+
+#theme-toggle {
+  margin-left: auto;
+}

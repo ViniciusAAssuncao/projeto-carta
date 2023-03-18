@@ -12,6 +12,7 @@
 		<header>
 			<p class="title-header">Biguaçu,</p>
 			<p id="date" class="title-header"></p>
+			<button id="theme-toggle">Modo escuro</button>
 		</header>
 		<h1>Caro Professor,</h1>
 		<p>Espero que o senhor esteja bem! Gostaria de compartilhar com o senhor que acabei de
@@ -41,6 +42,18 @@
 		let year = date.getFullYear();
 		let fullDate = day + "/" + month + "/" + year;
 		document.getElementById("date").innerHTML = fullDate;
+
+		const themeToggle = document.querySelector('#theme-toggle');
+
+		themeToggle.addEventListener('click', () => {
+			const body = document.querySelector('body');
+			body.classList.toggle('dark-mode');
+			if (body.classList.contains('dark-mode')) {
+				themeToggle.textContent = 'Modo claro';
+			} else {
+				themeToggle.textContent = 'Modo escuro';
+			}
+		});
 	</script>
 </body>
 
