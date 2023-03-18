@@ -45,24 +45,6 @@ header {
   animation-play-state: paused;
 }
 
-@keyframes escrever {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-#carta::before {
-  content: "";
-  display: block;
-  height: 3px;
-  background-color: black;
-  margin-bottom: 20px;
-  animation: escrever 5s steps(50, end) forwards;
-  animation-play-state: paused;
-}
-
 .signature {
   font-family: "Great Vibes", cursive;
   display: flex;
