@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Minha Carta</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<div id="carta">
+		<header>
+			<p class="title-header">Biguaçu,</p>
+			<p id="date" class="title-header"></p>
+		</header>
+		<h1>Prezado(a) Professor.</h1>
+		<p id="first-paragraph">Espero que o senhor esteja bem! Gostaria de compartilhar com o senhor que acabei de
+			criar uma carta em HTML e
+			CSS usando as técnicas de design responsivo que aprendemos em sua disciplina de Responsive Web Development.
+		</p>
+		<p id="second-paragraph">Ao longo do desenvolvimento da carta, utilizei boas práticas de marcação semântica em
+			HTML e estilos CSS para
+			criar uma página que se adapta de forma fluida a diferentes tamanhos de tela, permitindo que a mensagem
+			possa ser lida confortavelmente tanto em desktops como em dispositivos móveis.</p>
+		<p id="third-paragraph">Também fiz uso de técnicas de design visual, incluindo uma paleta de cores com um
+			gradiente de fundo que
+			combina tons de rosa, amarelo e azul, além de sombras para dar um efeito de elevação nas seções.</p>
+		<p id="four-paragraph">Agradeço por compartilhar seus conhecimentos e técnicas conosco, que foram fundamentais
+			para o
+			desenvolvimento desta carta responsiva. Espero continuar a aprender com o senhor e a aplicar essas
+			habilidades em projetos futuros.</p>
+		<p id="final-paragraph">Atenciosamente,</p>
+		<p class="signature">Vinicius A. Assunção</p>
+	</div>
+
+	<script>
+		let date = new Date();
+		let day = date.getDate();
+		let month = date.getMonth() + 1;
+		let year = date.getFullYear();
+		let fullDate = day + "/" + month + "/" + year;
+		document.getElementById("date").innerHTML = fullDate;
+	</script>
+</body>
+
+</html>

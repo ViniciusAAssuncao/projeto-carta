@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+body {
+  background-color: #FAFCFF;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #f5f5dc;
+}
+
+.title-header {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+@keyframes mudar-fundo {
+  0% {
+    background-color: #f5f5dc;
+  }
+  25% {
+    background-color: #ffe4e1;
+  }
+  50% {
+    background-color: #ffffe0;
+  }
+  75% {
+    background-color: #e0ffff;
+  }
+  100% {
+    background-color: #f5f5dc;
+  }
+}
+#carta {
+  margin: auto;
+  max-width: 700px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  animation: mudar-fundo 10s ease-in-out infinite;
+  animation-play-state: paused;
+}
+
+@keyframes escrever {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+#carta::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: black;
+  margin-bottom: 20px;
+  animation: escrever 5s steps(50, end) forwards;
+  animation-play-state: paused;
+}
+
+.signature {
+  font-family: "Great Vibes", cursive;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
